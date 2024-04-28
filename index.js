@@ -12,7 +12,7 @@ app.use(express.urlencoded({extended : false}))
 
 
 //connecting to DataBase
-const connect = mongoose.connect("Add MongoDB ATLAS URL");
+const connect = mongoose.connect("mongodb+srv://pdftovoicegenerator:y02I6ady1Q3SrGpz@cluster0.xzpmwyb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0");
 
 //Check the connection is done or not
 connect.then(()=>{
@@ -74,7 +74,7 @@ app.post("/login" , async (req , res) =>{
         }
         const checkPass = await bcrypt.compare(req.body.password , check.password)
         if(checkPass){
-            res.redirect("http://127.0.0.1:5000")
+            res.redirect("Paste the MiniProjectURL")
         }else{
             res.send("Wrong Password")
         }
